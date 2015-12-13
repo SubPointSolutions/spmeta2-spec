@@ -13,6 +13,9 @@ It helps to improve development workflow filling the lack of documentation - now
 
 Not only it cuts a huge amount of time on crafting and keeping technical specificatoins up to date but also brings professional looking specs so that your clients would be always impressed with your work.
 
+M2 Spec has also a dedicated Yammer group for feature requests and disussions
+* [M2 Spec on Yammer](https://www.yammer.com/spmeta2feedback/#/threads/inGroup?feedId=6858117)
+
 #### Samples
 
 Here are a few one page specs generated for [SPMeta2 starter Intranet Model](https://github.com/SubPointSolutions/spmeta2-vsixextensions):
