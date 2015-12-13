@@ -1,0 +1,46 @@
+﻿
+@media screen {
+
+    .m2-page-header {
+        padding: 30px 15px;
+        text-align: left;
+        color: rgba(255,255,255,.8);
+        background-color: #337ab7;
+        font-size: 20px;
+    }
+
+        .m2-page-header h1 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+    /* background for the body and doc */
+    body {
+        background-color: #dadada;
+    }
+
+    .m2-page-header .container {
+        background-color: transparent;
+    }
+
+    body > .container {
+        padding-top: 20px;
+    }
+
+    .container {
+        background-color: #ffffff;
+    }
+
+
+    h3 {
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+@media print {
+    .m2-sidenav {
+        display: none;
+    }
+}

@@ -1,0 +1,8 @@
+﻿
+@foreach (var js in @Model.Theme.Js)
+{
+    <!-- @js.Name -->
+    <script>
+        @Raw(js.Content)
+    </script>
+}

@@ -1,0 +1,32 @@
+﻿<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                Property
+            </th>
+            <th>
+                Value
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var property in Model.PropertyValues)
+        {
+            <tr class="form-group">
+                <td>@property.Title</td>
+                <td>
+                    @if (ViewBag.Config.Theme.DoesValueHaveCustomView(property, property.Value))
+                    {
+                        @Include(ViewBag.Config.Theme.GetCustomViewForValue(property, property.Value), property.Value);
+                    }
+                    else
+                    {
+                        @property.Value
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,30 @@
+﻿@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-bordered table-hover ">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th>IsTokenisable</th>
+                <th>IsCData</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var value in Model)
+            {
+                <tr>
+                    <td>@value.Name</td>
+                    <td>@value.Type</td>
+                    <td>@value.Value</td>
+                    <td>@value.IsTokenisable</td>
+                    <td>@value.IsCData</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
