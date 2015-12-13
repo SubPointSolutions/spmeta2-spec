@@ -81,10 +81,10 @@ namespace SPMeta2.Spec.Tests.Tests
             // default themes are under 'SPMeta2.Spec.Defaults' namespace
 
             // spec theme
-            // Theme specTheme = null;
-            // Theme specTheme = new DefaultTheme();
-            // Theme specTheme = new DefaultBlueprintTheme();
-            //  Theme specTheme = new DefaultMetroBootstrapTheme();
+            // ThemeBase specTheme = null;
+            //ThemeBase specTheme = new DefaultTheme();
+            //ThemeBase specTheme = new DefaultBlueprintTheme();
+            //ThemeBase specTheme = new DefaultMetroBootstrapTheme();
             ThemeBase specTheme = new DefaultMetroBootstrapBlueprintTheme();
 
             // 4 - create a list of the models to be used in the final spec
@@ -112,7 +112,8 @@ namespace SPMeta2.Spec.Tests.Tests
                                     specTheme);
 
             // just save the file and open in the browser
-            var specFileName = string.Format("m2-spec-{0}.html", Environment.TickCount);
+            //var specFileName = string.Format("m2-spec-{0}.html", Environment.TickCount);
+            var specFileName = string.Format("m2-spec-{0}.html", specTheme.Name);
             File.WriteAllText(specFileName, specFileContent);
 
             //Process.Start("chrome.exe", specFileName);

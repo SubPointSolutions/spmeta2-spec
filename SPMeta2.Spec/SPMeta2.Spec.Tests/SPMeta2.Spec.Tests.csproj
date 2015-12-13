@@ -64,11 +64,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Modules\StringResources.Designer.cs">
-      <DependentUpon>StringResources.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Tests\DisplayServiceTests.cs" />
     <Compile Include="Tests\SpecTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,24 +90,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modules\Implicit\Style Library\Specs.Intranet\3rd part\jQuery\jquery-1.11.3.min.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Modules\Implicit\Style Library\Specs.Intranet\AboutThisSite\about-site.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Modules\Implicit\Style Library\Specs.Intranet\js\Specs.Intranet.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Modules\Implicit\Style Library\Specs.Intranet\Yammer\yammer-group-feed.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Modules\StringResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Content Include="SampleOutput\m2-spec-DefaultBluePrintTheme.html" />
+    <Content Include="SampleOutput\m2-spec-DefaultMetroBootstrapTheme.html" />
+    <Content Include="SampleOutput\m2-spec-DefaultTheme.html" />
+    <Content Include="SampleOutput\m2-spec-MetroBootstrapBlueprint.html" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
