@@ -108,6 +108,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SampleImg\m2-spec-DefaultBluePrintTheme.png" />
     <Content Include="SampleImg\m2-spec-MetroBootstrapBlueprint.png" />
     <Content Include="SampleOutput\m2-spec-DefaultBluePrintTheme.html" />
     <Content Include="SampleOutput\m2-spec-DefaultMetroBootstrapTheme.html" />

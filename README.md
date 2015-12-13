@@ -25,6 +25,14 @@ Here are a few one page specs generated for [SPMeta2 starter Intranet Model](htt
 * [m2-spec-DefaultTheme.html](https://github.com/SubPointSolutions/spmeta2-spec/tree/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/SampleOutput)
 * [m2-spec-MetroBootstrapBlueprint.html](https://github.com/SubPointSolutions/spmeta2-spec/tree/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/SampleOutput)
 
+Here are a few [sceenshots](https://github.com/SubPointSolutions/spmeta2-spec/tree/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/SampleImg) on how it looks like:
+
+**MetroBootstrapBlueprint theme in action**
+![](https://raw.githubusercontent.com/SubPointSolutions/spmeta2-spec/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/SampleImg/m2-spec-MetroBootstrapBlueprint.png)
+
+**DefaultBluePrintTheme theme in action**
+![](https://raw.githubusercontent.com/SubPointSolutions/spmeta2-spec/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/SampleImg/m2-spec-DefaultBluePrintTheme.png)
+
 #### Usage
 More samples on usage can be found in unit tests under ["SpecTests" class](https://github.com/SubPointSolutions/spmeta2-spec/blob/dev/SPMeta2.Spec/SPMeta2.Spec.Tests/Tests/SpecTests.cs), and here are the basics to get started:
 
