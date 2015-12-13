@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE72928E-DB23-4A00-B6C8-2D3B6F74CD6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPMeta2.Spec</RootNamespace>
+    <AssemblyName>SPMeta2.Spec</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SPMeta2.Spec.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'net45|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\net45\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SPMeta2.Spec.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug45|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug45\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SPMeta2.Spec.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RazorEngine, Version=3.7.4.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.7.4\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.1.2.40\lib\net45\SPMeta2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPMeta2.Standard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.Standard.1.2.40\lib\net45\SPMeta2.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\SpecConfig.cs" />
+    <Compile Include="Config\SpecItemConfig.cs" />
+    <Compile Include="Config\SpecTypedItemConfig.cs" />
+    <Compile Include="Defaults\DefaultMetroBootstrapBlueprintTheme.cs" />
+    <Compile Include="Defaults\DefaultMetroBootstrapTheme.cs" />
+    <Compile Include="Defaults\DefaultSpecServiceConfig.cs" />
+    <Compile Include="Defaults\DefaultBlueprintTheme.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceFactory.cs" />
+    <Compile Include="Services\Common\ContentTypeLookupDefinition.cs" />
+    <Compile Include="Services\Common\DisplayServices.cs" />
+    <Compile Include="Services\Common\DataLookupService.cs" />
+    <Compile Include="Services\Common\ListLookupDefinition.cs" />
+    <Compile Include="Services\ModelHandlers\SpecModelHandler.cs" />
+    <Compile Include="Services\ModelHandlers\SpecModelService.cs" />
+    <Compile Include="Services\ModelHandlers\SpecModelTreeTraverseService.cs" />
+    <Compile Include="Services\ModelHandlers\SpecViewModelHostBase.cs" />
+    <Compile Include="Services\SpecMetadata.cs" />
+    <Compile Include="Services\SpecService.cs" />
+    <Compile Include="Defaults\DefaultTheme.cs" />
+    <Compile Include="Themes\Theme.cs" />
+    <Compile Include="Themes\ThemeTemplateFile.cs" />
+    <Compile Include="ViewModels\DefinitionGroupViewModel.cs" />
+    <Compile Include="ViewModels\DefinitionPropertyMetadataViewModel.cs" />
+    <Compile Include="ViewModels\DefinitionPropertyTitleViewModel.cs" />
+    <Compile Include="ViewModels\DefinitionPropertyViewModel.cs" />
+    <Compile Include="ViewModels\DefinitionViewModel.cs" />
+    <Compile Include="ViewModels\SpecViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\Templates\Layout\body-footer.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Layout\body-content.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Layout\body-scripts.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Layout\body-header.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Sidebar\body-sidenav-item.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Sidebar\body-sidenav.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Item\definition-group.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Item\root-definition.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Item\modal-details.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Item\item-details.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Item\expandable-item.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-FieldAttributeValue.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-ValueForUICulture.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-string.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-WebPartPageDefinition-CustomPageLayout.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-FieldValue.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-WebPartProperty.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Enumerable-ParameterBindingValue.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-ContentTypeDefinition-ParentContentType.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-ListDefinition-TemplateType.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Bool.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Partial\Values\Type-Array-Byte.cshtml" />
+    <EmbeddedResource Include="Templates\Default\Templates\Layout\body-head.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Default\main.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\Default\Templates\Partial\Tables\" />
+    <Folder Include="Templates\Default\Templates\Partial\TreeTables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\_css\200 - main.css" />
+    <EmbeddedResource Include="Templates\Default\_js\500 - main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\_css\100  - bootstrap-overrides.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\_css\050 - bootstrap.min.css" />
+    <EmbeddedResource Include="Templates\Default\_js\200 - jquery.treegrid.bootstrap3.js" />
+    <EmbeddedResource Include="Templates\Default\_js\100 - jquery.treegrid.min.js" />
+    <EmbeddedResource Include="Templates\Default\_js\050 - bootstrap.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\_css\150 - jquery.treegrid.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Default\_js\025 - jquery-1.11.3.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\Blueprint\_css\1100 - main-blueprint.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\MetroBootstrap\_css\1100 - metro-bootstrap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\MetroBootstrapBlueprint\_css\1100 - main-blueprint.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

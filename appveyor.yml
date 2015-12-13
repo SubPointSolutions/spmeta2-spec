@@ -1,0 +1,3 @@
+artifacts:
+  - path: '*.nupkg'
+    name: nuget packages

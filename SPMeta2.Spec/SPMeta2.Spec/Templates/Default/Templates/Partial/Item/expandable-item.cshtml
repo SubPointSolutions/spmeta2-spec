@@ -1,0 +1,16 @@
+﻿
+<tr class="treegrid-@Model.ClientId treegrid-parent-@Model.Parent.ClientId">
+    <td colspan="5">
+        <a href="#@Model.ClientId" data-toggle="modal" data-target="#modal-detils-@Model.ClientId" data-toggle="collapse">@Model.ExpandableTitle</a>
+
+        @Include("modal-details", @Model)
+
+    </td>
+</tr>
+
+@foreach (var group in Model.ExpandableDefinitions)
+{
+    <div style="padding-left:10px">
+        @Include("expandable-item", group)
+    </div>
+}

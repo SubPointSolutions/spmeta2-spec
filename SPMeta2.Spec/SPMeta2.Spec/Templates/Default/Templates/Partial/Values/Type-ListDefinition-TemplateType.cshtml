@@ -1,0 +1,6 @@
+﻿@if (Model != null)
+{
+    <div data-toggle="popover" title="Details" data-content="TemplateType: @Model">
+        @ViewBag.Config.DataLookupService.LookupListTemplateTypeName(Model)
+    </div>
+}

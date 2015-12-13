@@ -1,0 +1,27 @@
+﻿<nav class="nav m2-sidenav affix">
+    <ul class="nav">
+
+        @if (!string.IsNullOrEmpty(Model.Metadata.Summary))
+        {
+            <li>
+                <a href="#Summary">Summary</a>
+            </li>
+        }
+
+        @foreach (var def in Model.Definitions)
+        {
+            <li>
+                <a href="#RootDefinitionAnchor_@def.ClientId">@(def.Title)</a>
+
+                <ul>
+                    @foreach (var group in def.Groups)
+                    {
+                        <text>
+                            @Include("body-sidenav-item", group)
+                        </text>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+</nav>

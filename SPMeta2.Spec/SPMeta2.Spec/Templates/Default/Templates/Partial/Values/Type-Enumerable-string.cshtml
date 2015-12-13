@@ -1,0 +1,15 @@
+﻿@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-bordered table-hover">
+        <tbody>
+
+            @foreach (var value in Model)
+            {
+                <tr>
+                    <td>@value</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}

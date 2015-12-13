@@ -1,0 +1,15 @@
+﻿
+@media screen {
+
+    .m2-page-header {
+        padding: 30px 15px;
+        text-align: left;
+        color: rgba(255,255,255,.8);
+        background-color: #337ab7;
+        font-size: 20px;
+        /*background-color:#269;*/
+        background-image: linear-gradient(rgba(255,255,255,0.1) 2px, transparent 0px), linear-gradient(90deg, rgba(255,255,255,0.1) 2px, transparent 1px), linear-gradient(rgba(255,255,255,0.05) 1px, transparent 0.5px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 0.5px);
+        background-size: 30px 30px, 30px 30px, 10px 10px, 10px 10px;
+        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    }
+}

@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <div class="row">
+
+        <div class="col-md-9" role="main">
+
+            @if (!string.IsNullOrEmpty(Model.Metadata.Summary))
+            {
+                <p>
+                    <a name="Summary"></a>@Model.Metadata.Summary
+                </p>
+            }
+
+            <!-- root definition -->
+            @foreach (var def in Model.Definitions)
+            {
+                <text>
+                    @Include("root-definition", def)
+                </text>
+            }
+            <!-- root end -->
+        </div>
+
+        <div class="col-md-3" role="complementary">
+            @Include("body-sidenav", Model)
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿
+<a id="RootDefinitionAnchor_@Model.ClientId"></a>
+<h3>@(Model.Title)</h3>
+
+@foreach (var group in Model.Groups)
+{
+    <text>
+        @Include("definition-group", group)
+    </text>
+}

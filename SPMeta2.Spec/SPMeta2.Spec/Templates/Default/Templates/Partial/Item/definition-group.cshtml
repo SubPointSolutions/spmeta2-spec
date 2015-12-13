@@ -1,0 +1,110 @@
+﻿<p>
+    <a id="GroupAnchor_@Model.ClientId"></a><h4>@Model.Title</h4>
+
+    <table class="table table-bordered table-hover tree">
+
+        <thead>
+            <tr>
+                @foreach (var value in Model.Headers)
+                {
+                    <th>@value.Title</th>
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var key in Model.Values.Keys)
+            {
+                <tr class="treegrid-@key.ClientId">
+                    @foreach (var value in Model.Values[key])
+                    {
+                        if (Model.Values[key].IndexOf(value) == 0 && key.Groups.Count > 0)
+                        {
+                            <td>
+                                @*<a href="#@key.ClientId" data-toggle="collapse">@value</a>*@
+
+                                <a href="#@key.ClientId"
+                                   data-toggle="modal"
+                                   data-target="#modal-detils-@key.ClientId"
+                                   data-toggle="collapse">
+                                    @if (ViewBag.Config.Theme.DoesValueHaveCustomView(value, value.Value))
+                                    {
+                                        @Include(ViewBag.Config.Theme.GetCustomViewForValue(value, value.Value), value.Value);
+                                    }
+                                    else
+                                    {
+                                        @value.Value
+                                    }
+                                </a>
+
+                                @Include("modal-details", key)
+                            </td>
+                        }
+                        else if (Model.Values[key].IndexOf(value) == 0)
+                        {
+                            <td>
+                                <a href="#@key.ClientId"
+                                   data-toggle="modal"
+                                   data-target="#modal-detils-@key.ClientId"
+                                   data-toggle="collapse">
+                                    @if (ViewBag.Config.Theme.DoesValueHaveCustomView(value, value.Value))
+                                    {
+                                        @Include(ViewBag.Config.Theme.GetCustomViewForValue(value, value.Value), value.Value);
+                                    }
+                                    else
+                                    {
+                                        @value.Value
+                                    }
+                                </a>
+
+                                @Include("modal-details", key)
+
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                @if (ViewBag.Config.Theme.DoesValueHaveCustomView(value, value.Value))
+                                {
+                                    @Include(ViewBag.Config.Theme.GetCustomViewForValue(value, value.Value), value.Value);
+                                }
+                                else
+                                {
+                                    @value.Value
+                                }
+                            </td>
+                        }
+                    }
+
+                </tr>
+
+                if (key.Groups.Count > 0 && key.IsExpandable)
+                {
+                    foreach (var group in key.ExpandableDefinitions)
+                    {
+                        <text>
+                            @Include("expandable-item", group)
+                        </text>
+
+                    }
+                }
+                else
+                {
+                    <tr class="collapse panel-collapse nohover" id="@key.ClientId">
+                        <td colspan="@(Model.Headers.Count)">
+                            <div>
+                                <text>
+                                    @Include("modal-details", key)
+                                </text>
+
+
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+
+    </table>
+</p>

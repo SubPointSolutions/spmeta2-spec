@@ -1,0 +1,26 @@
+﻿@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-bordered table-hover ">
+
+        <thead>
+            <tr>
+                <th>FieldId</th>
+                <th>FieldName</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var value in Model)
+            {
+                <tr>
+                    <td>@value.FieldId</td>
+                    <td>@value.FieldName</td>
+                    <td>@value.Value</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}

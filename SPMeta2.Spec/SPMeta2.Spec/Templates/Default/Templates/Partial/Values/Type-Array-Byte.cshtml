@@ -1,0 +1,14 @@
+﻿@if (Model != null)
+{
+    <div class="text-center">
+        @if (Model.Length > 0)
+        {
+            @Model.Length
+            <span>bytes</span>
+        }
+        else
+        {
+            <span></span>
+        }
+    </div>
+}
