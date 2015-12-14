@@ -36,8 +36,7 @@ namespace SPMeta2.Spec.Tests.Tests
 
             specService.GenerateSpecs(null, new[] { new ModelNode() });
         }
-
-
+        
         [TestMethod]
         [TestCategory("Spec.Validation")]
         [ExpectedException(typeof(ArgumentException))]
