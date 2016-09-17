@@ -10,7 +10,7 @@ TileDescription: 'Technical documentation made easy - build beautiful one-page s
 
 ## SPMeta2.Specs in details
 
-SPMeta2.Specs - CI1
+SPMeta2.Specs - appveyor CI - 1
 
 SPMeta2.Specs provides a simple API to generate beautiful one page HTML technical specifications based on your SPMeta2 models. It helps to improve development workflow filling the lack of documentation - now all information architecture, fields, content types, list and libraries and the rest of the artifacts are structured and presented in a nice way.
 
