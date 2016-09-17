@@ -1,3 +1,9 @@
+test: off
+
+clone_folder: c:\prj
+
+build_script: 
+    - ps: c:\prj\SPMeta2.Spec\Build\build.ps1 -Verbosity Minimal -Target "Default-Appveyor"
+
 artifacts:
-  - path: '*.nupkg'
-    name: nuget packages
+    - path: '**\packages\*.nupkg'
